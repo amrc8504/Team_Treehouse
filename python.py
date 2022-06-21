@@ -36,39 +36,17 @@
 #     if letter in "oh":
 #         print(letter)
 
-#Python project - Purchase tickets.
+# Lists
 
-def ticketSale():
-
-    SERVICE_FEE = 2
-    
-    TICKET_PRICE = 10
-
-    tickets_remaining = 100
-
-    def calculate_price(purchase):
-        return purchase * TICKET_PRICE + SERVICE_FEE
-
-    while tickets_remaining != False:
-        print(f'Buy now! There are only {tickets_remaining} tickets remaining!')
-        user_name = input("Welcome! What is your name? ")
-        username = user_name.title()
-        print(f'Hello {username}!')
-        purchase = input(f'How many tickets would you like to buy {username}? ')
-        try:
-            purchase = int(purchase)
-            if purchase > tickets_remaining:
-                raise ValueError(f'There are only {tickets_remaining} tickets remaining.')
-        except ValueError as err:
-            print(f'I did not quite understand that. {err} Please try again.')
-        else:
-            total = calculate_price(purchase)
-            print(f'{purchase} tickets will cost ${total}.')
-            confirm = input('Do you want to complete this order? [Y/N] ')
-            if confirm.lower() == "y":
-                print("Sold!")
-                tickets_remaining -= purchase
-            else:
-                print(f'Ok, {username}. Your order has been cancelled.')
-    print("Sorry the tickets are sold out. :(")
-ticketSale()
+# attendees = ['anthony', 'arielle', 'tyler']
+# attendees.append("Ashley")
+# attendees.extend(["James", "Guil"])
+# optional_invites = ["Ben J.", "Dave"]
+# potential_attendees = attendees + optional_invites
+# attendees.insert(0, "Tony")
+# print(attendees)
+# print("There are", len(potential_attendees), "attendees currently.") 
+anthonys_lunch = "\N{TACO}"
+carne_asada = anthonys_lunch
+del anthonys_lunch
+print(carne_asada)
